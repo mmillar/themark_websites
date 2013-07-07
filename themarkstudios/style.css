@@ -18,9 +18,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   clear: both;
 }
 .content {
-  background: url("images/gradient_background.png") repeat-y center top;
+  background: url("images/gradient_background.jpg") repeat-y center top;
   padding: 44px;
-  min-height: 552px;
+  height: 469px;
 }
 
 /* Wrapper */
@@ -30,7 +30,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* Header */
 #header {
-  background: url("images/header_background.png") repeat-y;
+  background: url("images/header_background.jpg") repeat-y;
   height: 63px;
 }
 #site-logo {
@@ -65,7 +65,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* Footer */
 #footer {
-  background: url("images/header_background.png") repeat-y;
+  background: url("images/header_background.jpg") repeat-y;
   height: 63px;
   color: #fff;
   padding-bottom: 0.5em;
@@ -93,7 +93,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 64px;
   line-height: 80px;
   color: #fff;
-  background: url("images/main_image.png") no-repeat center top;
+  background: url("images/main_image.jpg") no-repeat center top;
   text-align: center;
   padding: 1em;
 }
@@ -117,7 +117,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   background-color: #fff;
   float: left;
   width: 280px;
-  height: 380px;
+  height: 455px;
 }
 #what-we-do .section:first-child {
   margin-left: 0;
@@ -131,6 +131,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 33px;
   line-height: 33px;
   margin-bottom: 5px;
+  padding-top: 30px;
+}
+#what-we-do .section div#image {
+  padding-top: 44px;
+}
+#what-we-do .section p {
+  width: 90%;
 }
 
 /* Case Studies */
@@ -143,32 +150,33 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 #case-studies-nav ul li {
   display: table-cell;
   padding: 10px;
-  width: 100px;
-  height: 100px;
+  width: 118px;
+  height: 94px;
   vertical-align: middle;
   text-align: center;
 }
 #case-studies-nav ul li img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 118px;
+  max-height: 94px;
 }
 #case-studies-content .hidden {
   display: none;
   background-color: #fff;
-  padding: 44px 10px;
+  padding: 30px 10px;
+  height: 292px;
 }
 #case-studies-title {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 47px;
   line-height: 36px;
-  margin-bottom: 1em;
+  margin-bottom: 42px;
 }
 #case-study-video, #case-study-info, #case-study-quote {
   float: left;
 }
 #case-study-video {
-  width: 45%;
+  width: 40%;
   padding-right: 5%;
 }
 #case-study-info {
@@ -176,7 +184,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0 2.5%;
 }
 #case-study-quote {
-  width: 20%;
+  width: 25%;
   padding-left: 2.5%;
 }
 #case-studies-heading {
@@ -189,7 +197,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 14px;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 #case-study-quote p img {
   float: left;
@@ -213,7 +221,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* Our Clients */
 #our-clients {
   margin: 0 44px;
-  padding: 44px;
+  padding: 15px;
   background-color: #fff;
 }
 #clients {
@@ -233,6 +241,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 #image {
   display: inline-block;
+  vertical-align: middle;
   padding-right: 44px;
 }
 #image:last-child {
