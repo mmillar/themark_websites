@@ -20,5 +20,5 @@ $(document).ready(function() {
     $(this).closest("li").css("background-color", "#fff");
     $("#case-studies-content").find("div.hidden#" + $(this).attr("id")).show();
   });
-  $("#case-studies-nav a:first-child").trigger("click");
+  $("#case-studies-nav li").first().find("a").trigger("click");
 });
