@@ -11,6 +11,7 @@ $(document).ready(function() {
 
   // Case Studies Navigation
   $("#case-studies-nav").on('click', 'a', function() {
+    $("#case-studies-content").find("div.hidden#" + $("#case-studies-nav").find("li.active a").attr("id")).find("video").load();
     $("#case-studies-nav a").each(function() {
       var image = $(this).find("img").attr("src").substring($(this).find("img").attr("src").lastIndexOf("/"));
       $(this).closest("li").css("background", "none");
