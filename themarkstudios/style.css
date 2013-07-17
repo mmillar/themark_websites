@@ -69,17 +69,10 @@ html, body {
 }
 
 /* Footer */
-footer#home {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -544px;
-}
 #footer {
   background: url("images/header_background.jpg") repeat-y;
   height: 63px;
   color: #fff;
-  padding-bottom: 0.5em;
 }
 #footer-copyright {
   font-family: "Montserrat", sans-serif;
@@ -113,6 +106,7 @@ body#home #header {
   line-height: 80px;
   color: #fff;
   text-align: center;
+  padding-bottom: 126px; /* TEMP */
 }
 #home-content div {
   font-weight: 700;
