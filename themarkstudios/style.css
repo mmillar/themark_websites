@@ -24,7 +24,8 @@ html, body {
 }
 .content {
   background: url("images/gradient_background.jpg") repeat-y center top;
-  padding: 44px;
+  padding-top: 44px;
+  padding-bottom: 0;
   min-height: 469px;
 }
 
@@ -35,7 +36,7 @@ html, body {
 
 /* Header */
 #header {
-  background: url("images/header_background.jpg") repeat-y;
+  background: url("images/header_background.jpg");
   height: 63px;
 }
 #site-logo {
@@ -70,7 +71,7 @@ html, body {
 
 /* Footer */
 #footer {
-  background: url("images/header_background.jpg") repeat-y;
+  background: url("images/header_background.jpg");
   height: 63px;
   color: #fff;
 }
@@ -85,7 +86,7 @@ html, body {
   float: left;
 }
 #footer-logo {
-  padding-top: 10px;
+  padding-top: 5px;
   padding-right: 44px;
   float: right;
 }
@@ -94,10 +95,6 @@ html, body {
 body#home {
   background: url("images/main_image.jpg") no-repeat center center fixed;
   background-size: cover;
-  position: relative;
-}
-body#home #header {
-  margin-bottom: 100px;
 }
 #home-content {
   font-family: "Montserrat", sans-serif;
@@ -106,7 +103,7 @@ body#home #header {
   line-height: 80px;
   color: #fff;
   text-align: center;
-  padding-bottom: 126px; /* TEMP */
+  padding-top: 100px;
 }
 #home-content div {
   font-weight: 700;
@@ -136,7 +133,7 @@ body#home #header {
 #what-we-do .section:last-child {
   margin-right: 0;
 }
-#what-we-do .section div {
+#what-we-do .section div:not(.clear) {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 33px;

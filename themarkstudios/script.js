@@ -37,3 +37,21 @@ $(document).ready(function() {
     $(this).find("img").attr("src", "images/case_studies_nav" + image);
   });
 });
+
+$(window).load(function() {
+  // Set footer at bottom of screen
+  resize_body();
+  $(window).resize(function() {
+    resize_body();
+  });
+});
+
+function resize_body() {
+  if ($("body#home").length != 0) {
+    var tmp = $(window).height() - $("#header").outerHeight(true) - $("#home-content").outerHeight(true) - $("#footer").outerHeight(true);
+    $("#home-content").css("padding-bottom", tmp);
+  } else {
+    var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content").outerHeight(true) - $("footer").outerHeight(true);
+    $(".content").css("padding-bottom", tmp);
+  }
+}
