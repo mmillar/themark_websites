@@ -14,10 +14,13 @@
     <div id="wrapper">
       <header>
         <div id="header">
-          <div id="site-logo">
-            <a href="index.html"><img src="images/site_logo.png"></a>
+          <div id="mobile-header">
+            <div id="site-logo">
+              <a href="index.html"><img src="images/site_logo.png"></a>
+            </div>
           </div>
-          <div id="header-nav">
+          <div id="header-nav" class="inactive">
+            <div id="mobile-current-page"></div>
             <ul>
               <li><a href="what-we-do.html">What We Do</a></li>
               <li class="current-page"><a href="case-studies.html">Case Studies</a></li>
@@ -41,6 +44,17 @@
               <li><a id="cs7"><img src="images/case_studies_nav/dfait.jpg" /></a></li>
               <li><a id="cs8"><img src="images/case_studies_nav/toronto_star.jpg" /></a></li>
             </ul>
+            <div id="mobile-current-case-study" class="inactive"></div>
+            <ul class="mobile">
+              <li><a id="cs1" name="hsbc.jpg">HSBC</a></li>
+              <li><a id="cs2" name="manulife_financial1.jpg">Manulife Financial 1</a></li>
+              <li><a id="cs3" name="manulife_financial2.jpg">Manulife Financial 2</a></li>
+              <li><a id="cs4" name="rbc.jpg">RBC</a></li>
+              <li><a id="cs5" name="bdc.jpg">BDC</a></li>
+              <li><a id="cs6" name="cic.jpg">CIC</a></li>
+              <li><a id="cs7" name="dfait.jpg">Foreign Affairs Canada</a></li>
+              <li><a id="cs8" name="toronto_star.jpg">thestar.com</a></li>
+            </ul>
           </div>
           <div id="case-studies-content">
             <div class="hidden" id="cs1">
@@ -48,6 +62,12 @@
               <div id="case-studies-individual">
                 <div id="case-study-video">
                   <video width="417" height="234" controls>
+                    <source src="videos/clients/hsbc.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div id="case-study-video" class="mobile">
+                  <video width="280" height="157" controls>
                     <source src="videos/clients/hsbc.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
@@ -74,6 +94,12 @@
                     Your browser does not support the video tag.
                   </video>
                 </div>
+                <div id="case-study-video" class="mobile">
+                  <video width="280" height="157" controls>
+                    <source src="videos/clients/manulife_financial1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <div id="case-study-info">
                   <div id="case-studies-heading">Client Objective</div>
                   <p>Communicate new flex-time work program to employees across North America.</p>
@@ -90,6 +116,12 @@
               <div id="case-studies-individual">
                 <div id="case-study-video">
                   <video width="417" height="234" controls>
+                    <source src="videos/clients/manulife_financial2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div id="case-study-video" class="mobile">
+                  <video width="280" height="157" controls>
                     <source src="videos/clients/manulife_financial2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
@@ -127,6 +159,12 @@
                     Your browser does not support the video tag.
                   </video>
                 </div>
+                <div id="case-study-video" class="mobile">
+                  <video width="280" height="157" controls>
+                    <source src="videos/clients/rbc.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <div id="case-study-info">
                   <div id="case-studies-heading">Client Objective</div>
                   <p>Provide financial and other tips on caring for ageing loved ones.</p>
@@ -149,6 +187,12 @@
                     Your browser does not support the video tag.
                   </video>
                 </div>
+                <div id="case-study-video" class="mobile">
+                  <video width="280" height="157" controls>
+                    <source src="videos/clients/bdc.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <div id="case-study-info">
                   <div id="case-studies-heading">Client Objective</div>
                   <p>Establish BDC as the go-to bank for small business owners</p>
@@ -166,6 +210,7 @@
               <div id="case-studies-title">Become a publisher</div>
               <div id="case-studies-individual">
                 <div id="case-study-video"><a href="http://www.opencanada.org"><img src="images/case_studies/cic.jpg" /></a></div>
+                <div id="case-study-video" class="mobile"><a href="http://www.opencanada.org"><img src="images/case_studies/cic.jpg" /></a></div>
                 <div id="case-study-info">
                   <div id="case-studies-heading">Client Objective</div>
                   <p>Evolve from a think tank with a limited audience to a daily publisher with a global audience of 100,000 international relations influencers.</p>
@@ -192,6 +237,7 @@
               <div id="case-studies-title">Build your community</div>
               <div id="case-studies-individual">
                 <div id="case-study-video"><img src="images/case_studies/dfait.jpg" /></div>
+                <div id="case-study-video" class="mobile"><img src="images/case_studies/dfait.jpg" /></div>
                 <div id="case-study-info">
                   <div id="case-studies-heading">Client Objective</div>
                   <p>Assess interest in a proposed government-sponsored network of elite Canadian business people abroad.</p>
@@ -227,6 +273,16 @@
                   </object>
                   <a href="videos/clients/toronto_star.swf">Click here for a larger version</a>
                 </div>
+                <div id="case-study-video" class="mobile">
+                  <object width="280" height="157"
+                  classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+                  codebase="http://fpdownload.macromedia.com/
+                  pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+                    <param name="SRC" value="videos/clients/toronto_star.swf">
+                    <embed src="videos/clients/toronto_star.swf" width="280" height="157"></embed>
+                  </object>
+                  <a href="videos/clients/toronto_star.swf">Click here for a larger version</a>
+                </div>
                 <div id="case-study-info">
                   <div id="case-studies-heading">Client Objective</div>
                   <p>Create a microsite at thestar.com focused on innovation in transportation, energy, and infrastructure; sponsored by GE.</p>
@@ -246,11 +302,11 @@
 
       <footer>
         <div id="footer">
-          <div id="footer-copyright">
-            COPYRIGHT 2013 © THE MARK STUDIOS<br />ALL RIGHTS RESERVED
-          </div>
           <div id="footer-logo">
             <a href="index.html"><img src="images/footer_logo.png" /></a>
+          </div>
+          <div id="footer-copyright">
+            COPYRIGHT 2013 © THE MARK STUDIOS<br />ALL RIGHTS RESERVED
           </div>
         </div>
       </footer>

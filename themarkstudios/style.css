@@ -53,6 +53,10 @@ html, body {
   color: #fff;
   padding: 22px 44px 0 0;
 }
+#mobile-current-page {
+  display: none;
+  text-transform: uppercase;
+}
 #header-nav li {
   display: inline;
   list-style-type: none;
@@ -75,6 +79,11 @@ html, body {
   height: 63px;
   color: #fff;
 }
+#footer-logo {
+  padding-top: 5px;
+  padding-right: 44px;
+  float: right;
+}
 #footer-copyright {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -84,11 +93,6 @@ html, body {
   padding-top: 22.5px; /* TEMP */
   padding-left: 44px;
   float: left;
-}
-#footer-logo {
-  padding-top: 5px;
-  padding-right: 44px;
-  float: right;
 }
 
 /* Home */
@@ -156,6 +160,16 @@ body#home {
 #case-studies-nav ul {
   list-style-type: none;
 }
+#case-studies-nav ul.mobile {
+  display: none;
+}
+#mobile-current-case-study {
+  display: none;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  margin: 0;
+  background-color: #2b3990;
+}
 #case-studies-nav ul li {
   display: table-cell;
   padding: 4.5px;
@@ -192,6 +206,9 @@ body#home {
   font-weight: 300;
   font-size: 14px;
   text-align: center;
+}
+#case-study-video.mobile {
+  display: none;
 }
 #case-study-video img {
   max-width: 100%;
@@ -245,6 +262,12 @@ body#home {
   margin: 0 44px;
   padding: 15px;
   background-color: #fff;
+}
+#our-clients.mobile {
+  width: 300px;
+  margin: 5px auto;
+  padding: 5px;
+  display: none;
 }
 #clients {
   margin-left: auto;
@@ -305,4 +328,248 @@ body#home {
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 1em;
+}
+
+/* MOBILE */
+@media screen and (max-width : 480px) {
+  html {
+    max-width: 480px;
+  }
+  body {
+    width: 100%;
+  }
+  #header, .content, #footer {
+    max-width: 480px;
+  }
+  .content {
+    padding: 10px 0;
+  }
+
+  /* Header */
+  #header {
+    background: none;
+    height: 100%;
+  }
+  #mobile-header {
+    background: url("images/header_background.jpg") center;
+    height: 63px;
+  }
+  #site-logo {
+    float: none;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px; /* TEMP */
+  }
+  #header-nav {
+    float: none;
+    padding: 0;
+    border-top: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+    text-align: center;
+    cursor: pointer;
+  }
+  #header-nav.inactive {
+    background: #000 url("images/nav-icon-inactive.png") right 5px top 4px no-repeat;
+  }
+  #header-nav.active {
+    background: #000 url("images/nav-icon-active.png") right 1px top 1px no-repeat;
+  }
+  #mobile-current-page {
+    display: block;
+  }
+  #header-nav ul {
+    display: none;
+  }
+  #header-nav ul li {
+    display: block;
+    text-align: center;
+    border-top: 1px #fff solid;
+    padding: 0;
+    margin: 0;
+  }
+  #header-nav li.current-page {
+    padding: 0;
+    border: none;
+    border-top: 1px #fff solid;
+    background-color: #2b3990;
+  }
+
+  /* Footer */
+  #footer {
+    background: url("images/header_background.jpg") repeat-y center;
+    text-align: center;
+    height: 115px;
+  }
+  #footer-logo {
+    float: none;
+    padding: 0;
+    padding-top: 10px;
+  }
+  #footer-copyright {
+    float: none;
+    padding: 0;
+    padding-top: 1em;
+  }
+
+  /* Home */
+  #home-content {
+    font-size: 22px;
+    line-height: 27px;
+  }
+  #home-content div {
+    font-size: 25px;
+  }
+
+  /* What We Do */
+  #what-we-do {
+    font-size: 13px;
+    line-height: 17px;
+    padding: 5px;
+  }
+  #what-we-do .section {
+    margin: 10px auto;
+    padding: 10px;
+    float: none;
+    width: 300px;
+    height: 281px;
+  }
+  #what-we-do .section:first-child {
+    margin-left: auto;
+    margin-top: 0;
+  }
+  #what-we-do .section:last-child {
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  #what-we-do .section div:not(.clear) {
+    font-size: 31px;
+    line-height: 31px;
+    margin-bottom: 7px;
+    padding-top: 10px;
+  }
+  #what-we-do .section div#image {
+    padding-top: 0;
+    width: 160px;
+    height: 144px;
+  }
+  #what-we-do .section div#image img {
+    width: 160px;
+    height: 144px;
+  }
+
+  /* Case Studies */
+  #case-studies-nav {
+    width: 300px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  #case-studies-nav ul, #case-studies-nav ul.mobile {
+    display: none;
+  }
+  #mobile-current-case-study {
+    display: block;
+    border-top: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+  }
+  #mobile-current-case-study.inactive {
+    background: #2b3990 url("images/nav-icon-inactive.png") right 8px top 8px no-repeat;
+  }
+  #mobile-current-case-study.active {
+    background: #2b3990 url("images/nav-icon-active.png") right 6px top 6px no-repeat;
+  }
+  #case-studies-nav ul.mobile li {
+    display: block;
+    text-align: left;
+    border-top: 1px #fff solid;
+    padding: 2px 5px;
+    margin: 0;
+    width: auto;
+    height: auto;
+    text-transform: uppercase;
+    background-color: #2b3990;
+  }
+  #case-studies-content {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+  }
+  #case-studies-content .hidden {
+    margin: 10px;
+    padding: 0;
+    min-height: 0;
+  }
+  #case-studies-title {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  #case-study-video {
+    display: none;
+  }
+  #case-study-video.mobile {
+    display: block;
+  }
+  #case-study-video, #case-study-info, #case-study-quote {
+    float: none;
+    width: 100%;
+    padding: 5px 0;
+  }
+  #case-studies-heading {
+    margin-bottom: 5px;
+  }
+  #case-studies-heading:before {
+    content: "";
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* Our Clients */
+  #our-clients {
+    display: none;
+  }
+  #our-clients.mobile {
+    display: block;
+  }
+  #clients {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  #image {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #image img {
+    width: 75px;
+  }
+
+  /* Contact Us */
+  #contact-us {
+    width: 300px;
+    margin: 5px auto;
+    padding: 5px;
+  }
+  #contact-info {
+    float: none;
+    margin: 0;
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+  #contact-title {
+    margin-bottom: 0.5em;
+  }
+  #contact-us img {
+    float: right;
+    padding: 5px;
+    width: 94px;
+    height: 111px;
+  }
 }
