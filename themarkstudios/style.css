@@ -372,15 +372,20 @@ body#home {
     text-align: center;
     cursor: pointer;
   }
-  #header-nav.inactive {
-    background: #000 url("images/nav-icon-inactive.png") right 5px top 4px no-repeat;
-  }
-  #header-nav.active {
-    background: #000 url("images/nav-icon-active.png") right 1px top 1px no-repeat;
-  }
   #mobile-current-page {
-    background-color: #000;
     display: block;
+  }
+  #header-nav.inactive #mobile-current-page {
+    background-color: #000;
+    background-image: url("images/nav-icon-inactive.png");
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+  }
+  #header-nav.active #mobile-current-page {
+    background-color: #000;
+    background: #000 url("images/nav-icon-active.png");
+    background-position: 99% 50%;
+    background-repeat: no-repeat;
   }
   #header-nav ul {
     display: none;
