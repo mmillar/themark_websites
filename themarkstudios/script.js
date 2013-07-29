@@ -115,6 +115,5 @@ function resize_body() {
     $("#header").css("width", "480px");
     $(".content").css("width", "480px");
     $("#footer").css("width", "480px");
-    }
   }
 }
