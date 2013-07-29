@@ -340,6 +340,7 @@ body#home {
   }
   #header, .content, #footer {
     max-width: 480px;
+    overflow: hidden;
   }
   .content:not(#home-content) {
     padding: 10px 0;
