@@ -332,15 +332,15 @@ body#home {
 
 /* MOBILE */
 @media screen and (max-width : 480px) {
-  html {
+  html, body, #wrapper {
+    min-width: 320px;
     max-width: 480px;
   }
-  body {
-    width: 100%;
+  img {
+    max-width: 100%;
   }
   #header, .content, #footer {
-    min-width: 480px;
-    width: 480px;
+    width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
@@ -430,13 +430,14 @@ body#home {
   #what-we-do {
     font-size: 13px;
     line-height: 17px;
-    padding: 5px;
+    padding: 0;
+    margin: 0;
   }
   #what-we-do .section {
     margin: 10px auto;
     padding: 10px;
     float: none;
-    width: 300px;
+    width: 280px;
     height: 281px;
   }
   #what-we-do .section:first-child {
@@ -464,6 +465,9 @@ body#home {
   }
 
   /* Case Studies */
+  #case-studies {
+    margin: 0;
+  }
   #case-studies-nav {
     width: 300px;
     font-family: "Montserrat", sans-serif;

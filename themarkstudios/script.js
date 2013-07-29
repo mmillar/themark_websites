@@ -78,11 +78,6 @@ $(window).load(function() {
       }
     });
 
-    // Header navigation link click (MOBILE)
-    $("#header-nav li a").click(function() {
-      $(location).attr('href', $(this).attr("href"));
-    });
-
     // Current page in navigation (MOBILE)
     var page_name = document.title.substring(document.title.lastIndexOf("-") + 2);
     $("#mobile-current-page").html(page_name);
@@ -102,8 +97,8 @@ $(window).load(function() {
 
 function resize_body() {
   if ($("body#home").length != 0) {
-    var tmp = $(window).height() - $("#header").outerHeight(true) - $("#home-content").outerHeight(true) - $("#footer").outerHeight(true);
-    $("#home-content").css("padding-bottom", tmp);
+    var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content#home-content").outerHeight(true) - $("#footer").outerHeight(true);
+    $(".content#home-content").css("padding-bottom", tmp);
   } else {
     var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content").outerHeight(true) - $("footer").outerHeight(true);
     $(".content").css("padding-bottom", tmp);
@@ -117,8 +112,8 @@ function resize_body() {
   } else {
     $("#header-nav li a").addClass("mobile");
     $("#header-nav").find("ul").css("display", 'none');
-    $("#header").css("width", "480px");
-    $(".content").css("width", "480px");
-    $("#footer").css("width", "480px");
+    $("#header").css("width", $(window).width() + "px");
+    $(".content").css("width", $(window).width() + "px");
+    $("#footer").css("width", $(window).width() + "px");
   }
 }
