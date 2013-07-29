@@ -112,8 +112,14 @@ function resize_body() {
   } else {
     $("#header-nav li a").addClass("mobile");
     $("#header-nav").find("ul").css("display", 'none');
-    $("#header").css("width", $(window).width() + "px");
-    $(".content").css("width", $(window).width() + "px");
-    $("#footer").css("width", $(window).width() + "px");
+    if ($(window).width() < 330) {
+      $("#header").css("width", "330px");
+      $(".content").css("width", "330px");
+      $("#footer").css("width", "330px");
+    } else {
+      $("#header").css("width", $(window).width() + "px");
+      $(".content").css("width", $(window).width() + "px");
+      $("#footer").css("width", $(window).width() + "px");
+    }
   }
 }
