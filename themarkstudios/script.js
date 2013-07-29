@@ -97,10 +97,10 @@ $(window).load(function() {
 
 function resize_body() {
   if ($("body#home").length != 0) {
-    var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content#home-content").outerHeight(true) - $("#footer").outerHeight(true);
+    var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content#home-content").outerHeight(true);
     $(".content#home-content").css("padding-bottom", tmp);
   } else {
-    var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content").outerHeight(true) - $("footer").outerHeight(true);
+    var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content").outerHeight(true) - $("#footer").outerHeight(true);
     $(".content").css("padding-bottom", tmp);
   }
   if ($(window).width() > 480) {

@@ -494,10 +494,16 @@ body#home {
     border-bottom: 2px #fff solid;
   }
   #mobile-current-case-study.inactive {
-    background: #2b3990 url("images/nav-icon-inactive.png") right 8px top 8px no-repeat;
+    background-color: #2b3990;
+    background-image: url("images/nav-icon-inactive.png");
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
   }
   #mobile-current-case-study.active {
-    background: #2b3990 url("images/nav-icon-active.png") right 6px top 6px no-repeat;
+    background-color: #2b3990;
+    background-image: url("images/nav-icon-active.png");
+    background-position: 99% 50%;
+    background-repeat: no-repeat;
   }
   #case-studies-nav ul.mobile li {
     display: block;
