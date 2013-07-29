@@ -22,7 +22,7 @@ html, body {
   margin-right: auto;
   clear: both;
 }
-.content {
+.content:not(#home-content) {
   background: url("images/gradient_background.jpg") repeat-y center top;
   padding-top: 44px;
   padding-bottom: 0;
@@ -341,7 +341,7 @@ body#home {
   #header, .content, #footer {
     max-width: 480px;
   }
-  .content {
+  .content:not(#home-content) {
     padding: 10px 0;
   }
 

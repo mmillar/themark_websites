@@ -106,8 +106,14 @@ function resize_body() {
   if ($(window).width() > 480) {
     $("#header-nav li a").removeClass("mobile");
     $("#header-nav").find("ul").css("display", 'inline');
+    $("#header").css("width", "");
+    $(".content").css("width", "");
+    $("#footer").css("width", "");
   } else {
     $("#header-nav li a").addClass("mobile");
     $("#header-nav").find("ul").css("display", 'none');
+    $("#header").css("width", $(window).width() + "px");
+    $(".content").css("width", $(window).width() + "px");
+    $("#footer").css("width", $(window).width() + "px");
   }
 }
