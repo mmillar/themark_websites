@@ -78,6 +78,11 @@ $(window).load(function() {
       }
     });
 
+    // Header navigation link click (MOBILE)
+    $("#header-nav li a").click(function() {
+      $(location).attr('href', $(this).attr("href"));
+    });
+
     // Current page in navigation (MOBILE)
     var page_name = document.title.substring(document.title.lastIndexOf("-") + 2);
     $("#mobile-current-page").html(page_name);
