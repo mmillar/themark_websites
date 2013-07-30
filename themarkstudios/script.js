@@ -1,11 +1,11 @@
 $(window).load(function() {
-  // Set footer at bottom of screen
-  resize_body();
-  $(window).resize(function() {
-    resize_body();
-  });
-
   $(document).ready(function() {
+    // Set footer at bottom of screen
+    resize_body();
+    $(window).resize(function() {
+      resize_body();
+    });
+
     // Header navigation hover
     $("#header-nav").on("mouseover", "li a:not(.mobile)", function() {
       $(this).closest("li").css("padding", "4px");
@@ -69,12 +69,14 @@ $(window).load(function() {
 
     // Header navigation toggle click (MOBILE)
     $("#header-nav").click(function() {
-      if ($(this).find("ul").css("display") == "none") {
-        $(this).find("ul").css("display", 'inline');
-        $(this).attr("class", "active");
-      } else {
-        $(this).find("ul").css("display", "none");
-        $(this).attr("class", "inactive");
+      if ($("input[name='mobile']").val() == "true") {
+        if ($(this).find("ul").css("display") == "none") {
+          $(this).find("ul").css("display", 'inline');
+          $(this).attr("class", "active");
+        } else {
+          $(this).find("ul").css("display", "none");
+          $(this).attr("class", "inactive");
+        }
       }
     });
 
@@ -97,19 +99,21 @@ $(window).load(function() {
 
 function resize_body() {
   if ($("body#home").length != 0) {
-    var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content#home-content").outerHeight(true);
+    var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content#home-content").outerHeight(true) + parseInt($(".content#home-content").css("padding-bottom"));
     $(".content#home-content").css("padding-bottom", tmp);
   } else {
-    var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content").outerHeight(true) - $("#footer").outerHeight(true);
+    var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content").outerHeight(true) - $("#footer").outerHeight(true) + parseInt($(".content").css("padding-bottom"));
     $(".content").css("padding-bottom", tmp);
   }
   if ($(window).width() > 480) {
+    $("input[name='mobile']").val("false");
     $("#header-nav li a").removeClass("mobile");
     $("#header-nav").find("ul").css("display", 'inline');
     $("#header").css("width", "");
     $(".content").css("width", "");
     $("#footer").css("width", "");
   } else {
+    $("input[name='mobile']").val("true");
     $("#header-nav li a").addClass("mobile");
     $("#header-nav").find("ul").css("display", 'none');
     $("#header").css("width", $(window).width() + "px");
