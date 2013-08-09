@@ -18,21 +18,19 @@ $(window).load(function() {
 
     // Case Studies Navigation
     $("#case-studies-nav ul:not(.mobile) li").on('click', 'a', function() {
-      $("#case-studies-content").find("div.hidden#" + $("#case-studies-nav ul:not(.mobile)").find("li.active a").attr("id")).find("video").load();
       $("#case-studies-nav ul:not(.mobile) li a").each(function() {
         var image = $(this).find("img").attr("src").substring($(this).find("img").attr("src").lastIndexOf("/"));
         $(this).closest("li").css("background", "none");
         $(this).closest("li").removeClass("active");
         $(this).find("img").attr("src", "images/case_studies_nav" + image);
       });
-      $("#case-studies-content div.hidden").each(function() {
-        $(this).hide();
-      });
-      $(this).closest("li").css("background-color", "#fff");
-      $(this).closest("li").addClass("active");
       var image = $(this).find("img").attr("src").substring($(this).find("img").attr("src").lastIndexOf("/"));
       $(this).find("img").attr("src", "images/case_studies_nav/rollovers" + image);
-      $("#case-studies-content").find("div.hidden#" + $(this).attr("id")).show();
+      var name = image.substring(1, image.lastIndexOf("."));
+      $("#case-studies-content").load("case_studies/" + name + ".html");
+      $("#case-studies-content").find("video").load();
+      $(this).closest("li").css("background-color", "#fff");
+      $(this).closest("li").addClass("active");
     });
     $("#case-studies-nav ul:not(.mobile) li").first().find("a").trigger("click");
     $("#case-studies-nav ul:not(.mobile)").on('mouseover', 'li:not(.active)', function() {
@@ -46,19 +44,17 @@ $(window).load(function() {
 
     // Case Studies Navigation (MOBILE)
     $("#case-studies-nav ul.mobile li").on('click', 'a', function() {
-      $("#case-studies-content").find("div.hidden#" + $("#case-studies-nav ul.mobile").find("li.active a").attr("id")).find("video").load();
       $("#case-studies-nav ul.mobile li a").each(function() {
         var image = $(this).attr("name");
         $(this).closest("li").css("background-color", "#2b3990");
         $(this).closest("li").removeClass("active");
         $(this).find("img").attr("src", "images/case_studies_nav/" + image);
       });
-      $("#case-studies-content div.hidden").each(function() {
-        $(this).hide();
-      });
+      var name = $(this).attr("name").substring(0, $(this).attr("name").lastIndexOf("."));
+      $("#case-studies-content").load("case_studies/" + name + ".html");
+      $("#case-studies-content").find("video").load();
       $(this).closest("li").addClass("active");
       $(this).closest("li").css("background-color", "#000");
-      $("#case-studies-content").find("div.hidden#" + $(this).attr("id")).show();
       $("#mobile-current-case-study").trigger("click");
 
       // Current case study (MOBILE)

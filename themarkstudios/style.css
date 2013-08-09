@@ -184,8 +184,7 @@ body#home {
   max-height: 93px;
   cursor: pointer;
 }
-#case-studies-content .hidden {
-  display: none;
+#case-studies-content {
   background-color: #fff;
   padding: 30px 10px;
   min-height: 292px;
@@ -518,14 +517,13 @@ body#home {
     background-color: #2b3990;
   }
   #case-studies-content {
-    width: 300px;
+    width: 280px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: #fff;
-  }
-  #case-studies-content .hidden {
-    margin: 10px;
-    padding: 0;
+    padding: 10px;
     min-height: 0;
   }
   #case-studies-title {
