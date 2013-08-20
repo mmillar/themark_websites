@@ -32,6 +32,7 @@ html, body {
 /* Wrapper */
 #wrapper {
   background-color: #fff;
+  position: relative;
 }
 
 /* Header */
@@ -75,7 +76,7 @@ html, body {
 
 /* Footer */
 #footer {
-  background: url("images/header_background.jpg");
+  background: url("images/header_background.jpg") center no-repeat;
   height: 63px;
   color: #fff;
 }
@@ -407,7 +408,7 @@ body#home {
 
   /* Footer */
   #footer {
-    background: url("images/header_background.jpg") repeat-y center;
+    background: url("images/header_background.jpg") center repeat-y;
     text-align: center;
     height: 115px;
   }
@@ -528,6 +529,7 @@ body#home {
   }
   #case-studies-title {
     font-size: 20px;
+    line-height: 28px;
     margin-bottom: 0;
   }
   #case-study-video {

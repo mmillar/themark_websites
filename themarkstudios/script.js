@@ -1,5 +1,8 @@
+$("#footer").hide();
+
 $(window).load(function() {
   $(document).ready(function() {
+    $("#footer").show();
     // Set footer at bottom of screen
     resize_body();
     $(window).resize(function() {
