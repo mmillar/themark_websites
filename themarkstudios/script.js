@@ -96,7 +96,7 @@ $(window).load(function() {
 
 function resize_body() {
   if ($("body#home").length != 0) {
-    var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content#home-content").outerHeight(true) + parseInt($(".content#home-content").css("padding-bottom"));
+    var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content#home-content").height();
     $(".content#home-content").css("padding-top", tmp / 2);
     $(".content#home-content").css("padding-bottom", tmp / 2);
   } else {
