@@ -76,6 +76,7 @@ html, body {
 
 /* Footer */
 #footer {
+  display: none;
   background: url("images/header_background.jpg") center no-repeat;
   height: 63px;
   color: #fff;
