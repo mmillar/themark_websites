@@ -97,7 +97,8 @@ $(window).load(function() {
 function resize_body() {
   if ($("body#home").length != 0) {
     var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content#home-content").outerHeight(true) + parseInt($(".content#home-content").css("padding-bottom"));
-    $(".content#home-content").css("padding-bottom", tmp);
+    $(".content#home-content").css("padding-top", tmp / 2);
+    $(".content#home-content").css("padding-bottom", tmp / 2);
   } else {
     var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content").outerHeight(true) - $("#footer").outerHeight(true) + parseInt($(".content").css("padding-bottom"));
     $(".content").css("padding-bottom", tmp);
