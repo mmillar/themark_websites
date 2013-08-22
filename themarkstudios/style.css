@@ -333,7 +333,7 @@ body#home {
 }
 
 /* MOBILE */
-@media screen and (max-width : 480px) {
+@media screen and (max-width : 480px), screen and (device-aspect-ratio : 40/71) {
   html, body, #wrapper {
     min-width: 320px;
     max-width: 480px;
@@ -593,5 +593,15 @@ body#home {
     padding: 5px;
     width: 94px;
     height: 111px;
+  }
+}
+
+@media screen and (device-aspect-ratio : 40/71) and (orientation : landscape) {
+  html, body, #wrapper {
+    min-width: 480px;
+    max-width: 1136px;
+  }
+  #header, #content, #footer {
+    max-width: 1136px;
   }
 }

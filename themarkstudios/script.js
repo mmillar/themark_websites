@@ -103,7 +103,7 @@ function resize_body() {
     var tmp = $(window).height() - $("#header").outerHeight(true) - $(".content").outerHeight(true) - $("#footer").outerHeight(true) + parseInt($(".content").css("padding-bottom"));
     $(".content").css("padding-bottom", tmp);
   }
-  if ($(window).width() > 480) {
+  if ($(window).width() > 480 && window.devicePixelRatio != 2) {
     $("input[name='mobile']").val("false");
     $("#header-nav li a").removeClass("mobile");
     $("#header-nav").find("ul").css("display", 'inline');
